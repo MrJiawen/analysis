@@ -2,7 +2,6 @@
 
 namespace CjwAnalysis\src;
 
-ini_set('memory_limit', '64M');
 error_reporting(E_ALL);
 
 class PhpAnalysis extends AnalysisAbstraction
