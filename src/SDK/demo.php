@@ -24,7 +24,7 @@ print_memory('没任何操作', $memory_info);
 
 require_once 'phpanalysis.class.php';
 
-$str = (isset($_POST['source']) ? $_POST['source'] : '');
+$str = (isset($_REQUEST['source']) ? $_REQUEST['source'] : '');
 
 $loadtime = $endtime1  = $endtime2 = $slen = 0;
 
@@ -34,15 +34,15 @@ $do_multi = $do_prop = $pri_dict = false;
 if($str != '')
 {
     //岐义处理
-    $do_fork = empty($_POST['do_fork']) ? false : true;
+    $do_fork = empty($_REQUEST['do_fork']) ? false : true;
     //新词识别
-    $do_unit = empty($_POST['do_unit']) ? false : true;
+    $do_unit = empty($_REQUEST['do_unit']) ? false : true;
     //多元切分
-    $do_multi = empty($_POST['do_multi']) ? false : true;
+    $do_multi = empty($_REQUEST['do_multi']) ? false : true;
     //词性标注
-    $do_prop = empty($_POST['do_prop']) ? false : true;
+    $do_prop = empty($_REQUEST['do_prop']) ? false : true;
     //是否预载全部词条
-    $pri_dict = empty($_POST['pri_dict']) ? false : true;
+    $pri_dict = empty($_REQUEST['pri_dict']) ? false : true;
     
     $tall = microtime(true);
     
@@ -100,9 +100,9 @@ ARM内部人士透露，11月5日，ARM高级副总裁lanDrew参观了联想研�
 
 <hr size='1' />
 
-<form id="form1" name="form1" method="post" action="?ac=done" style="margin:0px;padding:0px;line-height:24px;">
+<form id="form1" name="form1" method="get" action="?ac=done" style="margin:0px;padding:0px;line-height:24px;">
   <b>源文本：</b>&nbsp; <a href="dict_build_new.php" target="_blank">[更新词典]</a> <br/>
-    <textarea name="source" style="width:98%;height:150px;font-size:14px;"><?php echo (isset($_POST['source']) ? $_POST['source'] : $teststr); ?></textarea>
+    <textarea name="source" style="width:98%;height:150px;font-size:14px;"><?php echo (isset($_REQUEST['source']) ? $_REQUEST['source'] : $teststr); ?></textarea>
     <br/>
     <input type='checkbox' name='do_fork' value='1' <?php echo ($do_fork ? "checked='1'" : ''); ?>/>岐义处理
     <input type='checkbox' name='do_unit' value='1' <?php echo ($do_unit ? "checked='1'" : ''); ?>/>新词识别

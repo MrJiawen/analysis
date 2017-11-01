@@ -5,4 +5,15 @@
 composer require mr-jiawen/analysis
 ```
 
-## 第一步 
+## 第一部分 项目制作
+1. 重写整个src/SDK/phpanalysis.class.php 文件：
+    * 重写文件为：`src/AnalysisAbstraction.php`
+    * 去除 两个宏定义；
+    * 其余的不变
+    
+2. 提供对一个对外的类提供分词服务：PhpAnalysis.php
+    * 重写字典所在的目录
+    * 然后提供一个简易的执行方法
+
+补充：在sdk中`dict_build.php`是未使用到
+
