@@ -19,12 +19,13 @@ composer require mr-jiawen/analysis
 
 
 ## 第二部分 具体的使用方式：
-```markdown
 获取单例对象：
-    $ananlysis = PhpAnalysis::getInstance();
+```markdown
+$ananlysis = PhpAnalysis::getInstance();
+```
 执行分词：
-    $result = $ananlysis->cut('好好学习天天上上');  // 最初的分词结果
-    $result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊支付，得到其字符串结果
-    $result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊支付，得到其数组结果
-
+```
+$result = $ananlysis->cut('好好学习天天上上');  // 最初的分词结果
+$result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊支付，得到其字符串结果
+$result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊支付，得到其数组结果
 ```
