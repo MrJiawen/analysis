@@ -26,6 +26,6 @@ $ananlysis = PhpAnalysis::getInstance();
 执行分词：
 ```
 $result = $ananlysis->cut('好好学习天天上上');  // 最初的分词结果
-$result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊支付，得到其字符串结果
-$result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊支付，得到其数组结果
+$result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊字符，得到其字符串结果
+$result = $ananlysis->cut('好好学习天天上上','encode_array');   //转码到utf8并且去除特殊字符，得到其数组结果
 ```
