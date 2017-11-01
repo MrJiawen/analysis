@@ -95,7 +95,7 @@ abstract class AnalysisAbstraction
      * @param bool $load_all
      * @param string $source
      */
-    public function __construct($source_charset = 'utf-8', $target_charset = 'utf-8', $load_all = true, $source = '')
+    protected function __construct($source_charset = 'utf-8', $target_charset = 'utf-8', $load_all = true, $source = '')
     {
         // 初始化一个静态常量
         self::$_SP_ = chr(0xFF) . chr(0xFE);
