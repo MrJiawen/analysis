@@ -1,4 +1,4 @@
-# `analysis` php分词系统
+# analysis php分词系统
 > 本分词系统是依赖于 [PHPBONE开发框架的PHPAnalysis无组件分词系统](http://www.phpbone.com/phpanalysis/#api)，笔者直接引用了他的SDK(V2.0版本)进行再次封装，直接封装到composer中：
 
 ```markdown
@@ -18,7 +18,7 @@ composer require mr-jiawen/analysis
 补充：在sdk中`dict_build.php`是未使用到
 
 
-## 具体的使用方式：
+## 第二部分 具体的使用方式：
 ```markdown
 获取单例对象：
     $ananlysis = PhpAnalysis::getInstance();
